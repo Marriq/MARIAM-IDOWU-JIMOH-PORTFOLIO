@@ -7,46 +7,120 @@
     <title>Mariam Jimoh | Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; background-color: #f8f9fa; }
-        .hero { background-color: #ffffff; padding: 60px 0; text-align: center; border-bottom: 1px solid #eee; }
-        .section-title { margin-top: 40px; margin-bottom: 25px; font-weight: bold; color: #333; border-left: 5px solid #0d6efd; padding-left: 15px; }
-        .project-card { background: #fff; border: 1px solid #e0e0e0; padding: 20px; margin-bottom: 20px; border-radius: 12px; shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .cert-img { width: 100%; max-width: 400px; border-radius: 8px; margin-top: 10px; border: 1px solid #eee; }
-        footer { text-align: center; padding: 30px; background: #333; color: white; margin-top: 50px; }
+        /* General Page Settings */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background-color: #f4f7f6; color: #333; }
+        
+        /* Modern Blue Hero Header */
+        .hero { 
+            background: linear-gradient(135deg, #0d6efd 0%, #003d99 100%); 
+            color: white; 
+            padding: 80px 0; 
+            text-align: center; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .hero p { color: #d1d9e6; font-size: 1.1rem; }
+        
+        /* Section Styling */
+        .section-title { 
+            margin-top: 40px; 
+            margin-bottom: 25px; 
+            font-weight: bold; 
+            color: #003d99; 
+            border-left: 5px solid #0d6efd; 
+            padding-left: 15px; 
+        }
+
+        /* Interactive Cards */
+        .project-card { 
+            background: #ffffff; 
+            border: none; 
+            padding: 25px; 
+            margin-bottom: 25px; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        /* Certificate Images */
+        .cert-img { 
+            width: 100%; 
+            max-width: 500px; 
+            border-radius: 10px; 
+            margin-top: 15px; 
+            border: 1px solid #ddd; 
+            transition: 0.3s;
+        }
+        .cert-img:hover { opacity: 0.9; }
+
+        footer { text-align: center; padding: 40px; background: #212529; color: white; margin-top: 50px; }
         a { text-decoration: none; color: #0d6efd; }
     </style>
 </head>
 <body>
 
 <section class="hero">
-    <img src="https://raw.githubusercontent.com/Marriq/MARIAM-IDOWU-JIMOH-PORTFOLIO/main/graduation-photo.png" alt="Mariam Jimoh" style="width:180px; height:180px; border-radius:50%; object-fit: cover; border: 5px solid #0d6efd;">
-    <h1 class="mt-3">Mariam Jimoh</h1>
+    <img src="https://raw.githubusercontent.com/Marriq/MARIAM-IDOWU-JIMOH-PORTFOLIO/main/graduation-photo.png" alt="Mariam Jimoh" style="width:180px; height:180px; border-radius:50%; object-fit: cover; border: 5px solid rgba(255,255,255,0.2);">
+    <h1 class="mt-3 text-white">Mariam Jimoh</h1>
     <p class="lead">BSc Computer Science | National Open University of Nigeria</p>
     <p>Tech Enthusiast 💻 | Problem Solver | Lifelong Learner</p>
 </section>
 
 <div class="container">
     <h2 class="section-title">About Me</h2>
-    <p>Passionate about technology and building solutions that make life easier. Currently seeking job opportunities in Computer Science related roles.</p>
+    <div class="project-card">
+        <p>Passionate about technology and building solutions that make life easier. Currently seeking job opportunities in Computer Science related roles where I can apply my skills in software development and system modeling.</p>
+    </div>
+
+    <h2 class="section-title">Technical Stack</h2>
+    <div class="row g-3 mb-4">
+        <div class="col-6 col-md-3">
+            <div class="p-3 border rounded-3 bg-white text-center shadow-sm">
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="45">
+                <p class="mb-0 mt-2 fw-bold">Python</p>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="p-3 border rounded-3 bg-white text-center shadow-sm">
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML5" width="45">
+                <p class="mb-0 mt-2 fw-bold">HTML5</p>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="p-3 border rounded-3 bg-white text-center shadow-sm">
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" width="45">
+                <p class="mb-0 mt-2 fw-bold">Bootstrap</p>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="p-3 border rounded-3 bg-white text-center shadow-sm">
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/googlecloud/googlecloud-original.svg" alt="GCP" width="45">
+                <p class="mb-0 mt-2 fw-bold">Cloud</p>
+            </div>
+        </div>
+    </div>
 
     <h2 class="section-title">Mini Projects</h2>
     <div class="row">
         <div class="col-md-4">
             <div class="project-card">
                 <h5>To-Do List App</h5>
-                <p>Simple app to create, update, and delete tasks using Python. Demonstrates CRUD functionality.</p>
+                <p>Simple app to create, update, and delete tasks using Python. Demonstrates CRUD functionality and data management.</p>
             </div>
         </div>
         <div class="col-md-4">
             <div class="project-card">
                 <h5>Expense Tracker</h5>
-                <p>Python/Excel project to track daily expenses and generate visual reports.</p>
+                <p>Python/Excel project to track daily expenses and generate automated visual reports for budgeting.</p>
             </div>
         </div>
         <div class="col-md-4">
             <div class="project-card">
                 <h5>Quiz Game</h5>
-                <p>Interactive Python game with multiple-choice questions.</p>
+                <p>Interactive Python game with multiple-choice questions focusing on logic and user interaction.</p>
             </div>
         </div>
     </div>
@@ -75,16 +149,17 @@
 
     <h2 class="section-title">Contact Me</h2>
     <div class="project-card">
-        <p><strong>Email:</strong> <a href="mailto:Jimohidowu333@gmail.com">Jimohidowu333@gmail.com</a></p>
+        <p class="text-center">Interested in working together? Feel free to reach out!</p>
+        <p class="text-center"><strong>Email:</strong> <a href="mailto:Jimohidowu333@gmail.com">Jimohidowu333@gmail.com</a></p>
         <div class="text-center mt-3">
-            <p>Scan to view live:</p>
-            <img src="https://raw.githubusercontent.com/Marriq/MARIAM-IDOWU-JIMOH-PORTFOLIO/main/qr-code.png" alt="QR Code" style="width:120px;">
+            <p class="text-muted small">Scan to view my portfolio live:</p>
+            <img src="https://raw.githubusercontent.com/Marriq/MARIAM-IDOWU-JIMOH-PORTFOLIO/main/qr-code.png" alt="QR Code" style="width:120px; border: 1px solid #eee; padding: 5px; border-radius: 10px;">
         </div>
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2026 Mariam Jimoh | Built with Bootstrap</p>
+    <p class="mb-0">&copy; 2026 Mariam Jimoh | Designed with Professional Care</p>
 </footer>
 
 </body>
